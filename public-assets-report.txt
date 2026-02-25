@@ -1,0 +1,85 @@
+﻿==== PUBLIC FILES (sorted by size) ====
+
+Name                     Extension  Length LastWriteTime        
+----                     ---------  ------ -------------        
+services.png             .png      6107185 2/24/2026 11:27:52 AM
+money3.png               .png      2120482 2/24/2026 12:02:51 PM
+loan.png                 .png      1768311 2/24/2026 12:20:53 PM
+overdraft.png            .png      1008498 2/24/2026 12:22:22 PM
+money2.jpg               .jpg       156071 2/24/2026 11:32:47 AM
+money8.jpg               .jpg       127217 2/24/2026 12:13:28 PM
+money6.jpg               .jpg       127217 2/24/2026 12:13:28 PM
+money7.jpg               .jpg       127217 2/24/2026 12:13:28 PM
+money1.jpg               .jpg       116578 2/24/2026 11:33:03 AM
+money9.jpg               .jpg        87649 2/24/2026 12:14:04 PM
+membership-handshake.jpg .jpg        60728 2/24/2026 11:49:33 AM
+money4.jpg               .jpg        55027 2/24/2026 12:11:46 PM
+money10.jpg              .jpg        49694 2/24/2026 12:11:34 PM
+money5.jpg               .jpg        49694 2/24/2026 12:11:34 PM
+money11.jpg              .jpg        48108 2/24/2026 12:16:42 PM
+next.svg                 .svg         1375 1/29/2026 1:54:01 AM 
+globe.svg                .svg         1035 1/29/2026 1:54:01 AM 
+file.svg                 .svg          391 1/29/2026 1:54:01 AM 
+window.svg               .svg          385 1/29/2026 1:54:01 AM 
+vercel.svg               .svg          128 1/29/2026 1:54:01 AM 
+money8.png               .png            0 2/24/2026 12:13:17 AM
+admin.png                .png            0 2/24/2026 12:13:17 AM
+money9.png               .png            0 2/24/2026 12:13:17 AM
+money7.png               .png            0 2/24/2026 12:13:17 AM
+money6.png               .png            0 2/24/2026 12:13:17 AM
+money11.png              .png            0 2/24/2026 12:13:17 AM
+money12.png              .png            0 2/24/2026 12:13:17 AM
+money10.png              .png            0 2/24/2026 12:13:17 AM
+cac.png                  .png            0 2/24/2026 12:13:17 AM
+money1.png               .png            0 2/24/2026 12:13:17 AM
+money13.png              .png            0 2/24/2026 12:13:17 AM
+money4.png               .png            0 2/24/2026 12:13:17 AM
+money5.png               .png            0 2/24/2026 12:13:17 AM
+money2.png               .png            0 2/24/2026 12:13:17 AM
+money14.png              .png            0 2/24/2026 12:13:17 AM
+money15.png              .png            0 2/24/2026 12:13:17 AM
+
+
+
+
+==== DUPLICATE BASENAMES (likely hidden extensions) ====
+
+Name    Count
+----    -----
+money1      2
+money10     2
+money11     2
+money2      2
+money4      2
+money5      2
+money6      2
+money7      2
+money8      2
+money9      2
+
+
+
+
+==== 0-BYTE IMAGE FILES (placeholders to delete) ====
+
+Name        Extension Length
+----        --------- ------
+admin.png   .png           0
+cac.png     .png           0
+money1.png  .png           0
+money10.png .png           0
+money11.png .png           0
+money12.png .png           0
+money13.png .png           0
+money14.png .png           0
+money15.png .png           0
+money2.png  .png           0
+money4.png  .png           0
+money5.png  .png           0
+money6.png  .png           0
+money7.png  .png           0
+money8.png  .png           0
+money9.png  .png           0
+
+
+
