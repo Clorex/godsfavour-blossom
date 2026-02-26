@@ -16,25 +16,8 @@ export default async function LoanPage() {
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start">
           <div className="space-y-6">
             <div className="rounded-3xl border bg-white p-7 text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">
-              <div className="font-semibold text-slate-900">How our loan works</div>
-              <ul className="list-disc pl-5 mt-3 space-y-2">
-                <li>You must have been saving with us for at least <b>3 months</b>.</li>
-                <li>We give loan based on your saving history with us.</li>
-                <li>Interest is <b>5% monthly</b>, calculated on the <b>outstanding balance</b> (as you pay, it reduces).</li>
-                <li>After you apply, we will contact you and explain your breakdown clearly.</li>
-              </ul>
-              <div className="mt-4">
-                {service?.body ? service.body : ""}
-              </div>
-
-              <div className="mt-4 font-semibold text-slate-900">Uploads</div>
-              <ul className="list-disc pl-5 mt-2 space-y-1">
-                <li>Passport photo</li>
-                <li>ID card</li>
-                <li>Proof of address</li>
-              </ul>
+              {service?.body || ""}
             </div>
-
             <LoanForm />
           </div>
 

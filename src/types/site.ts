@@ -2,6 +2,7 @@
   publicEmail: string;
   whatsapp: string;
   call: string;
+  callAlt?: string;
   headOfficeAddress: string;
   branchOfficeAddress: string;
   updatedAt?: number;
@@ -23,10 +24,8 @@ export type AboutContent = {
   body: string;
   trustTitle: string;
   trustBody: string;
-
-  adminImageUrl: string;   // /admin.png or cloudinary later
-  cacImageUrl: string;     // /cac.png or cloudinary later
-
+  adminImageUrl: string;
+  cacImageUrl: string;
   bePartTitle: string;
   bePartBody: string;
   updatedAt?: number;

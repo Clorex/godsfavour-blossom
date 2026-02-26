@@ -6,6 +6,13 @@ import MembershipForm from "@/components/forms/membership-form";
 import { getSiteContent, getSiteSettings } from "@/lib/content/server";
 import { publicAsset } from "@/lib/public-asset";
 
+function waLink(num: string) {
+  const digits = (num || "").replace(/\D/g, "");
+  if (!digits) return "";
+  const normalized = digits.startsWith("0") ? `234${digits.slice(1)}` : digits;
+  return `https://wa.me/${normalized}`;
+}
+
 export default async function AboutPage() {
   const about = await getSiteContent("about");
   const settings = await getSiteSettings();
@@ -15,28 +22,13 @@ export default async function AboutPage() {
       <Section title={about.title}>
         <div className="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-start">
           <div className="space-y-6">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-3xl border bg-white p-6">
-                <div className="text-xs text-muted-foreground">Established</div>
-                <div className="mt-1 font-semibold">September 2012</div>
-              </div>
-              <div className="rounded-3xl border bg-white p-6">
-                <div className="text-xs text-muted-foreground">What we focus on</div>
-                <div className="mt-1 font-semibold">Savings • Loan • Overdraft</div>
-              </div>
-            </div>
-
             <div className="rounded-3xl border bg-white p-7">
-              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">
-                {about.body}
-              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">{about.body}</p>
             </div>
 
             <div className="rounded-3xl border bg-white p-7">
               <h3 className="font-semibold">{about.trustTitle}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">
-                {about.trustBody}
-              </p>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">{about.trustBody}</p>
             </div>
 
             <div className="rounded-3xl border bg-white p-7">
@@ -51,8 +43,11 @@ export default async function AboutPage() {
               <h3 className="font-semibold">Contact</h3>
               <div className="mt-3 space-y-2 text-sm">
                 <p><span className="font-medium">Email:</span> {settings.publicEmail}</p>
-                <p><span className="font-medium">WhatsApp:</span> <a className="underline" href={`https://wa.me/${settings.whatsapp.replace(/\D/g, "")}`} target="_blank">{settings.whatsapp}</a></p>
-                <p><span className="font-medium">Call:</span> <a className="underline" href={`tel:${settings.call}`}>{settings.call}</a></p>
+                <p><span className="font-medium">WhatsApp:</span> <a className="underline" href={waLink(settings.whatsapp)} target="_blank">{settings.whatsapp}</a></p>
+                <p><span className="font-medium">Call line:</span> <a className="underline" href={`tel:${settings.call}`}>{settings.call}</a></p>
+                {settings.callAlt ? (
+                  <p><span className="font-medium">Another call line:</span> <a className="underline" href={`tel:${settings.callAlt}`}>{settings.callAlt}</a></p>
+                ) : null}
               </div>
             </div>
           </div>

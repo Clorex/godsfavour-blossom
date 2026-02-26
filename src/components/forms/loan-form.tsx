@@ -15,7 +15,9 @@ export default function LoanForm() {
   return (
     <div className="rounded-3xl border bg-white p-6">
       <div className="font-semibold text-slate-900">Loan Application</div>
-      <p className="mt-2 text-sm text-muted-foreground">Fill your details and upload the required images.</p>
+      <p className="mt-2 text-sm text-muted-foreground">
+        Interest: 7.5% monthly. Charges: 3% insurance, 2% bank, 1% admin, 0.6% office (total 6.6%).
+      </p>
 
       {ref ? (
         <div className="mt-4 rounded-2xl border p-4 bg-slate-50">
@@ -29,56 +31,57 @@ export default function LoanForm() {
       ) : null}
 
       <form onSubmit={onSubmit} className="mt-6 grid gap-4">
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Full name"><Input name="fullName" required /></Field>
-          <Field label="Date of birth"><Input name="dob" type="date" required /></Field>
+        <div className="grid gap-4 md:grid-cols-2">
+          <Field label="Client name"><Input name="fullName" required /></Field>
+          <Field label="Computer number"><Input name="computerNumber" required /></Field>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
           <Field label="Phone number"><Input name="phone" required /></Field>
-          <Field label="Email"><Input name="email" type="email" placeholder="optional (uses your login email if empty)" /></Field>
+          <Field label="Date of membership (optional)"><Input name="dateOfMembership" type="date" /></Field>
         </div>
 
-        <Field label="Home address"><Textarea name="address" rows={3} required /></Field>
+        <Field label="Client address"><Textarea name="address" rows={3} required /></Field>
 
-        <div className="grid gap-4 md:grid-cols-3 items-start">
-          <Field label="State of origin"><Input name="stateOfOrigin" required /></Field>
-          <Field label="LGA"><Input name="lga" required /></Field>
-          <Field label="State of residence"><Input name="stateOfResidence" required /></Field>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Occupation"><Input name="occupation" required /></Field>
-          <Field label="Employer / Business name (optional)"><Input name="employerOrBusiness" /></Field>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <Field label="Loan amount requested"><Input name="amountRequested" required /></Field>
-          <Field label="Repayment preference / tenor">
-            <Select name="tenor" required>
+        <div className="grid gap-4 md:grid-cols-3">
+          <Field label="Sex (optional)">
+            <Select name="sex">
               <option value="">Select</option>
-              <option value="1 month">1 month</option>
-              <option value="2 months">2 months</option>
-              <option value="3 months">3 months</option>
-              <option value="6 months">6 months</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
             </Select>
           </Field>
+          <Field label="Age (optional)"><Input name="age" /></Field>
+          <Field label="Business activities (optional)"><Input name="businessActivities" /></Field>
         </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          <Field label="Amount requested"><Input name="amountRequested" required /></Field>
+          <Field label="When was your last loan? (optional)"><Input name="lastLoan" placeholder="e.g. Jan 2025" /></Field>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2">
+          <Field label="Current loan date (optional)"><Input name="currentLoanDate" type="date" /></Field>
+          <Field label="Completion date (optional)"><Input name="completionDate" type="date" /></Field>
+        </div>
+
+        <Field label="Collateral (2× to 3× the value of the loan)">
+          <Textarea name="collateral" rows={3} placeholder="Describe collateral" required />
+        </Field>
 
         <div className="rounded-2xl border p-4 bg-slate-50">
           <div className="font-semibold text-sm">Uploads</div>
-          <div className="mt-3 grid gap-4 md:grid-cols-3 items-start">
-            <Field label="Passport (required)"><Input name="passport" type="file" accept="image/*" required /></Field>
-            <Field label="ID card (required)"><Input name="idCard" type="file" accept="image/*" required /></Field>
-            <Field label="Proof of address (required)"><Input name="proofOfAddress" type="file" accept="image/*" required /></Field>
-          </div>
-          <div className="mt-2 text-xs text-muted-foreground">
-            Tip: clear photo, readable text, good lighting.
+          <div className="mt-3 grid gap-4 md:grid-cols-2 items-start">
+            <Field label="Borrower passport"><Input name="passport" type="file" accept="image/*" required /></Field>
+            <Field label="ID card"><Input name="idCard" type="file" accept="image/*" required /></Field>
+            <Field label="Proof of address"><Input name="proofOfAddress" type="file" accept="image/*" required /></Field>
+            <Field label="Guarantor 1 passport"><Input name="guarantorPassport1" type="file" accept="image/*" required /></Field>
+            <Field label="Guarantor 2 passport"><Input name="guarantorPassport2" type="file" accept="image/*" required /></Field>
           </div>
         </div>
 
-        <button
-          disabled={loading}
-          className="rounded-2xl bg-[rgb(var(--g1))] text-white px-5 py-3 text-sm font-semibold disabled:opacity-60"
-        >
-          {loading ? "Submitting..." : "Submit Loan Application"}
+        <button disabled={loading} className="rounded-2xl bg-[rgb(var(--g1))] text-white px-5 py-3 text-sm font-semibold disabled:opacity-60">
+          {loading ? "Submitting..." : "Submit"}
         </button>
       </form>
     </div>

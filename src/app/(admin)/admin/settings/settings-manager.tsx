@@ -67,6 +67,10 @@ export default function SettingsManager() {
           <div className="text-sm font-semibold">Call</div>
           <input className="w-full rounded-2xl border px-4 py-3 text-sm" value={data.call || ""} onChange={(e) => setData({ ...data, call: e.target.value })} />
         </div>
+        <div className="space-y-1.5">
+          <div className="text-sm font-semibold">Another call line</div>
+          <input className="w-full rounded-2xl border px-4 py-3 text-sm" value={data.callAlt || ""} onChange={(e) => setData({ ...data, callAlt: e.target.value })} />
+        </div>
       </div>
 
       <div className="grid gap-4">
@@ -90,3 +94,4 @@ export default function SettingsManager() {
     </div>
   );
 }
+
