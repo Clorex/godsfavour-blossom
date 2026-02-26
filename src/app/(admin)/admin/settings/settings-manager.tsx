@@ -6,7 +6,6 @@ export default function SettingsManager() {
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
-
   const [data, setData] = useState<any>(null);
 
   async function load() {
@@ -59,14 +58,17 @@ export default function SettingsManager() {
           <div className="text-sm font-semibold">Public email</div>
           <input className="w-full rounded-2xl border px-4 py-3 text-sm" value={data.publicEmail || ""} onChange={(e) => setData({ ...data, publicEmail: e.target.value })} />
         </div>
+
         <div className="space-y-1.5">
           <div className="text-sm font-semibold">WhatsApp</div>
           <input className="w-full rounded-2xl border px-4 py-3 text-sm" value={data.whatsapp || ""} onChange={(e) => setData({ ...data, whatsapp: e.target.value })} />
         </div>
+
         <div className="space-y-1.5">
-          <div className="text-sm font-semibold">Call</div>
+          <div className="text-sm font-semibold">Call line</div>
           <input className="w-full rounded-2xl border px-4 py-3 text-sm" value={data.call || ""} onChange={(e) => setData({ ...data, call: e.target.value })} />
         </div>
+
         <div className="space-y-1.5">
           <div className="text-sm font-semibold">Another call line</div>
           <input className="w-full rounded-2xl border px-4 py-3 text-sm" value={data.callAlt || ""} onChange={(e) => setData({ ...data, callAlt: e.target.value })} />
@@ -78,6 +80,7 @@ export default function SettingsManager() {
           <div className="text-sm font-semibold">Head office address</div>
           <textarea className="w-full rounded-2xl border px-4 py-3 text-sm" rows={3} value={data.headOfficeAddress || ""} onChange={(e) => setData({ ...data, headOfficeAddress: e.target.value })} />
         </div>
+
         <div className="space-y-1.5">
           <div className="text-sm font-semibold">Branch office address</div>
           <textarea className="w-full rounded-2xl border px-4 py-3 text-sm" rows={3} value={data.branchOfficeAddress || ""} onChange={(e) => setData({ ...data, branchOfficeAddress: e.target.value })} />
@@ -94,4 +97,3 @@ export default function SettingsManager() {
     </div>
   );
 }
-

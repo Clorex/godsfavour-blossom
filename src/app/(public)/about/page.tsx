@@ -3,15 +3,9 @@
 import Section from "@/components/site/section";
 import VisualCard from "@/components/site/visual-card";
 import MembershipForm from "@/components/forms/membership-form";
+import ContactCards from "@/components/site/contact-cards";
 import { getSiteContent, getSiteSettings } from "@/lib/content/server";
 import { publicAsset } from "@/lib/public-asset";
-
-function waLink(num: string) {
-  const digits = (num || "").replace(/\D/g, "");
-  if (!digits) return "";
-  const normalized = digits.startsWith("0") ? `234${digits.slice(1)}` : digits;
-  return `https://wa.me/${normalized}`;
-}
 
 export default async function AboutPage() {
   const about = await getSiteContent("about");
@@ -41,13 +35,8 @@ export default async function AboutPage() {
 
             <div className="rounded-3xl border bg-white p-7">
               <h3 className="font-semibold">Contact</h3>
-              <div className="mt-3 space-y-2 text-sm">
-                <p><span className="font-medium">Email:</span> {settings.publicEmail}</p>
-                <p><span className="font-medium">WhatsApp:</span> <a className="underline" href={waLink(settings.whatsapp)} target="_blank">{settings.whatsapp}</a></p>
-                <p><span className="font-medium">Call line:</span> <a className="underline" href={`tel:${settings.call}`}>{settings.call}</a></p>
-                {settings.callAlt ? (
-                  <p><span className="font-medium">Another call line:</span> <a className="underline" href={`tel:${settings.callAlt}`}>{settings.callAlt}</a></p>
-                ) : null}
+              <div className="mt-4">
+                <ContactCards settings={settings} theme="light" />
               </div>
             </div>
           </div>
