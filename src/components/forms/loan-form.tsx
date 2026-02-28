@@ -16,7 +16,7 @@ export default function LoanForm() {
     <div className="rounded-3xl border bg-white p-6">
       <div className="font-semibold text-slate-900">Loan Application</div>
       <p className="mt-2 text-sm text-muted-foreground">
-        Interest: 7.5% monthly. Charges: 3% insurance, 2% bank, 1% admin, 0.6% office (total 6.6%).
+        Interest: 7.5% monthly. Charges: 5% insurance, 2% bank, 1% admin, 0.6% office (total 6.6%).
       </p>
 
       {ref ? (
@@ -87,5 +87,6 @@ export default function LoanForm() {
     </div>
   );
 }
+
 
 

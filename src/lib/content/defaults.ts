@@ -51,7 +51,7 @@ export const defaultServices: ServicesContent = {
       title: "Friendly Loan",
       summary: "Loan support based on your savings history with us.",
       body:
-        "Loan is available after you’ve been saving with us for at least 3 months.\n\nInterest: 7.5% monthly.\nComputer number is required.\nCollateral: 2× to 3× the value of the loan.\n\nCharges (loan/overdraft):\n• 3% insurance\n• 2% bank charges\n• 1% administrative charges\n• 0.6% office charges\nTotal: 6.6%.\n\nAfter you apply, we will contact you and explain your breakdown clearly.",
+        "Loan is available after you’ve been saving with us for at least 3 months.\n\nInterest: 7.5% monthly.\nComputer number is required.\nCollateral: 2× to 3× the value of the loan.\n\nCharges:\n• 5% insurance\n• 2% bank charges\n• 1% administrative charges\n• 0.6% office charges\nTotal: 8.6%.\n\nAfter you apply, we will contact you and explain your breakdown clearly.",
       showApplyButton: true,
     },
     {
@@ -59,7 +59,7 @@ export const defaultServices: ServicesContent = {
       title: "Overdraft",
       summary: "Short-term support based on your savings pattern.",
       body:
-        "Overdraft is available after you’ve been saving with us for at least 2 months.\n\nRepayment: you pay 33 numbers instead of 31 (we collect only 2 extra numbers).\nExample: if you pay ₦500 daily, you will pay ₦16,500 instead of ₦15,500.\n\nCharges (loan/overdraft):\n• 3% insurance\n• 2% bank charges\n• 1% administrative charges\n• 0.6% office charges\nTotal: 6.6%.\n\nAfter you apply, we will contact you and explain everything clearly.",
+        "Overdraft is available after you’ve been saving with us for at least 2 months.\n\nRepayment: you pay 33 numbers instead of 31 (we collect only 2 extra numbers).\nExample: if you pay ₦500 daily, you will pay ₦16,500 instead of ₦15,500.\n\nCharges:\n• 5% insurance\n• 2% bank charges\n• 1% administrative charges\n• 0.6% office charges\nTotal: 8.6%.\n\nAfter you apply, we will contact you and explain everything clearly.",
       showApplyButton: true,
     },
     {
@@ -80,6 +80,7 @@ export const defaultServices: ServicesContent = {
     },
   ],
 };
+
 
 
 
