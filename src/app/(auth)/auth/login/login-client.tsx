@@ -35,7 +35,7 @@ export default function LoginClient({ next }: { next: string }) {
       if (!res.ok || !j.ok) throw new Error(j?.message || "Failed to create session");
 
       toast.success("Logged in");
-      router.replace(next);
+      const dest = (next && next !== "/account") ? next : (j.isAdmin ? "/admin" : "/account"); router.replace(dest);
       router.refresh();
     } catch (err: any) {
       toast.error(err?.message || "Login failed");
@@ -79,3 +79,6 @@ export default function LoginClient({ next }: { next: string }) {
     </Card>
   );
 }
+
+
+

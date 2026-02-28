@@ -1,7 +1,7 @@
 ﻿export const publicNav = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Services", href: "/services" }
+  { title: "Services", href: "/services" },
 ];
 
 export const adminNav = [
@@ -9,5 +9,5 @@ export const adminNav = [
   { title: "Content", href: "/admin/content" },
   { title: "Applications", href: "/admin/applications" },
   { title: "Messages", href: "/admin/messages" },
-  { title: "Settings", href: "/admin/settings" }
+  { title: "Settings", href: "/admin/settings" },
 ];

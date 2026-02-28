@@ -42,7 +42,7 @@ export default function RegisterClient({ next }: { next: string }) {
       if (!res.ok || !j.ok) throw new Error(j?.message || "Failed to create session");
 
       toast.success("Account created");
-      router.replace(next);
+      const dest = (next && next !== "/account") ? next : "/account"; router.replace(dest);
       router.refresh();
     } catch (err: any) {
       toast.error(err?.message || "Registration failed");
@@ -87,3 +87,5 @@ export default function RegisterClient({ next }: { next: string }) {
     </Card>
   );
 }
+
+
